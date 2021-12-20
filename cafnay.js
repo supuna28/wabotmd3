@@ -315,6 +315,12 @@ Bot Admin : ${isBotAdmins}
 │
 └───────⭓
 
+┌──⭓ *Maker Menu*
+│
+│⭔ ${prefix}ktpmaker
+│
+└───────⭓
+
 ┌──⭓ *Owner Menu*
 │
 │⭔ ${prefix}chat [option]
@@ -602,6 +608,12 @@ cafnay.sendMessage(from, buttonMessage)
                 cafnay.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: troli })
             }
             break
+            case 'pinterest2':
+            if (!q) return m.reply('masukan query!')
+            m.reply(mess.wait)
+            anu = await fetchJson(`https://x-restapi.herokuapp.com/api/pinterest?q=${q}&apikey=BETA`)
+            await sendFileFromUrl(from,anu.image,`Done`,m)
+            break
             case 'wallpaper': {
                 m.reply(mess.wait)
                 anu = await wallpaper(q)
@@ -841,6 +853,39 @@ break
                     }
                     m.reply('Sedang Error !! Coba Beberapa Saat Lagi')
                 })
+		break
+		//////////////////MAKER MENU//////////////////
+		case 'ktpmaker':
+		m.reply(mess.wait)
+		if (args.length == 0) return m.reply(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|Gol Darah\n\nExample: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|LoL Human|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|O`)
+            get_args = args.join(" ").split("|")
+            nik = get_args[0]
+            prov = get_args[1]
+                                kabu = get_args[2]
+                                                    name = get_args[3]
+                                                                        ttl = get_args[4]
+   jk = get_args[5]
+                       jl = get_args[6]
+                                           rtrw = get_args[7]
+                                                               lurah = get_args[8]
+                                                                                   camat = get_args[9]
+              agama = get_args[10]
+                                  nikah = get_args[11]
+                                                      kerja = get_args[12]
+                                                                          warga = get_args[13]
+     berlaku = get_args[14]
+                         gdarah = get_args[15]
+		let media = await cafnay.downloadAndSaveMediaMessage(quoted)
+                if (/image/.test(mime)) {
+                    let url_img = await TelegraPh(media)
+                } else if (!/image/.test(mime)) {
+                    let url_img = await UploadFileUgu(media)
+                }
+                await fs.unlinkSync(media)
+            }
+		ktpnya = (`https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${url_img}`)
+		caf = `Nihh KTP Lu Bang :v`
+		await sendFileFromUrl(from,ktpnya.url,`${caf}`,m)
 		break
                             
                   
