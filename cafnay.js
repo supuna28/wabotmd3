@@ -2,7 +2,7 @@
    * Create By Dika Ardnt.
    * Contact Me on wa.me/6288292024190
    * Follow https://github.com/DikaArdnt
-   * Recode By Faiz.
+   * Recode By CF.
 */
 
 require('./config')
@@ -20,7 +20,7 @@ const { performance } = require('perf_hooks')
 const { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
 const { pinterest, wallpaper, wikimedia, porno, hentai, quotesAnime } = require('./lib/scraper')
 const { smsg, getGroupAdmins, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, delay, format, logic, generateProfilePicture, parseMention, getRandom } = require('./lib/myfunc')
-const fake = 'Faiz - Bot MD'
+const fake = 'CAFNAY - Bot MD'
 ownerNumber = ["6285793887010@s.whatsapp.net"]
 modelmenu = 'gif'
 apikeyy = 'sQMpXbHimbTkxGC'
@@ -125,8 +125,8 @@ module.exports = cafnay = async (cafnay, m, chatUpdate) => {
                          "status": 200, 
                          
                          "surface": 200, 
-                         "message": `FZXBOTZ - MD`, 
-                         "orderTitle": 'Faizz', 
+                         "message": `CAF•BOTz - MD`, 
+                         "orderTitle": 'CAF', 
                          "sellerJid": '0@s.whatsapp.net'
                     } 
                           } 
@@ -145,7 +145,7 @@ module.exports = cafnay = async (cafnay, m, chatUpdate) => {
                          
                          "surface": 200, 
                          "message": `Halo ${pushname}! dapet salam dari owner.`, 
-                         "orderTitle": 'dapet salam dari owner faizz!', 
+                         "orderTitle": 'dapet salam dari owner CAF!', 
                          "sellerJid": '6285793887010@s.whatsapp.net'
                     } 
                           } 
@@ -178,14 +178,14 @@ var buatpesan = await generateWAMessageFromContent(from, {
         "hydratedButtons": [
           {
             "urlButton": {
-              "displayText": "My Tiktok",
-              "url": "https://tiktok.com/@faizz_fzx"
+              "displayText": "My GITHUB",
+              "url": "https://github.com/CAF-ID"
             }
           },
           {
             "callButton": {
               "displayText": "Call Me",
-              "phoneNumber": "6285793887010"
+              "phoneNumber": "6283167714830"
             }
           },
           {
@@ -213,7 +213,7 @@ var buatpesan = await generateWAMessageFromContent(from, {
 cafnay.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
 }
 
-anuy = ` Hai ${pushname}, Saya FZXBOTZ !
+anuy = ` Hai ${pushname}, Saya CAFBOTZ !
 
 *INFO WAKTU*
 WIB : 
@@ -312,6 +312,12 @@ Bot Admin : ${isBotAdmins}
 │⭔ ${prefix}sgif
 │⭔ ${prefix}tomp4
 │⭔ ${prefix}tourl
+│
+└───────⭓
+
+┌──⭓ *Maker Menu*
+│
+│⭔ ${prefix}ktpmaker
 │
 └───────⭓
 
@@ -438,7 +444,7 @@ case 'hidetag':
                     case 'faq':
               const buttons = [
   {buttonId: `${prefix}menu`, buttonText: {displayText: 'BACK TO MENU'}, type: 1},
-  {buttonId: '${prefix}faq22', buttonText: {displayText: 'Apa itu FZX?'}, type: 1},
+  {buttonId: '${prefix}faq22', buttonText: {displayText: 'Apa itu CAF?'}, type: 1},
   {buttonId: '${prefix}faq33', buttonText: {displayText: 'Terinspirasi dsri mana?'}, type: 1}
 ]
 
@@ -450,12 +456,6 @@ const buttonMessage = {
 }
 cafnay.sendMessage(from, buttonMessage)
                break
-			   case 'faq22':
-			   m.reply('FZX Adalah nama bot, website, atau script say yg terinpirasi dari nama saya, Faiz (FZ) dan X sebagai hiasan bisr kemren')
-			   break
-	   case 'faq33':
-			   m.reply('Saya terinspirasi membuat bot whatsapp dari Bot milik mastah goyy, saya belajar ke dia waktu itu dan sekarang saya sudah bisa merakit/recode sendiri, Terimakasih Stah!!')
-			   break
 
 			   
 			   
@@ -504,6 +504,7 @@ cafnay.sendMessage(from, buttonMessage)
                 let media = await cafnay.downloadAndSaveMediaMessage(quoted)
                 if (/image/.test(mime)) {
                     let anu = await TelegraPh(media)
+                    console.log(anu)
                     m.reply(util.format(anu))
                 } else if (!/image/.test(mime)) {
                     let anu = await UploadFileUgu(media)
@@ -623,13 +624,13 @@ var templatetun = proto.Message.fromObject({
 
                                     hydratedButtons: [{
                                         urlButton: {
-                                            displayText: 'Info Selengkapnya',
-                                            url: 'https:/'
+                                            displayText: 'Github Owner',
+                                            url: 'https://github.com/CAF-ID'
                                         }
                                     }, {
                                         callButton: {
-                                            displayText: 'Hubungi FaizGans',
-                                            phoneNumber: '6285793887010s.whatsapp.net'
+                                            displayText: 'Call Owner',
+                                            phoneNumber: '6283167714830s.whatsapp.net'
                                         }
                                     }, {
 									"quickReplyButton": {
@@ -727,12 +728,12 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             case 'owner': case 'creator': {
                 let vcard = 'BEGIN:VCARD\n' // metadata of the contact card
                     + 'VERSION:3.0\n' 
-                    + 'N:;Faiz;;;'
-                    + 'FN:Faizd\n' // full name
-                    + 'ORG:Owner - Faiz;\n' // the organization of the contact
-                    + 'TEL;type=CELL;type=VOICE;waid=6285793887010:+62 857-9388-7010\n' // WhatsApp ID + phone number
+                    + 'N:;CAF;;;'
+                    + 'FN:CAF•NAY\n' // full name
+                    + 'ORG:Owner - CAF;\n' // the organization of the contact
+                    + 'TEL;type=CELL;type=VOICE;waid=6283167714830:+62 857-6217-9624\n' // WhatsApp ID + phone number
                     + 'END:VCARD'
-                cafnay.sendMessage(m.chat, { contacts: { displayName: 'Owner - Faiz', contacts: [{ vcard }] } }, { quoted: troli })
+                cafnay.sendMessage(m.chat, { contacts: { displayName: 'Owner - CAF', contacts: [{ vcard }] } }, { quoted: troli })
             }
             break
 			case 'kick': {
@@ -848,6 +849,47 @@ break
                     m.reply('Sedang Error !! Coba Beberapa Saat Lagi')
                 })
 		break
+		//////////////////MAKER MENU//////////////////
+   case 'ktpmaker': {
+ if (!quoted) throw `Balas Image`
+ if (args.length == 0) return reply(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|Gol Darah\n\nExample: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|LoL Human|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|O`)
+                m.reply(mess.wait)
+                let media = await cafnay.downloadAndSaveMediaMessage(quoted)
+                if (/image/.test(mime)) {
+                    let anu = await UploadFileUgu(media)
+                    anu1 = await fetchJson(anu)
+                    anu2 = `${anu.url}`
+                    get_args = args.join(" ").split("|")
+                    nik = get_args[0]
+                    prov = get_args[1]
+                    kabu = get_args[2]
+                    name = get_args[3]
+                    ttl = get_args[4]
+                    jk = get_args[5]
+                    jl = get_args[6]
+                    rtrw = get_args[7]
+                    lurah = get_args[8]
+                    camat = get_args[9]
+                    agama = get_args[10]
+                    nikah = get_args[11]
+                    kerja = get_args[12]
+                    warga = get_args[13]
+                    berlaku = get_args[14]
+                    gdarah = get_args[15]
+                    let ktpnya = await getBuffer(`https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${anu2}`)
+                    ktp = `https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${anu2}`
+                    http://fdz-app.herokuapp.com/api/maker/ktp?nik=087877173955&nama=Ferdi+zaky+luthfi+aridho&ttl=Pacitan,02-07-2021&jk=laki-laki&gdarah=-&almt=dsn.jeruk&rt-rw=02/02&kel=gondosari&kcmtn=punung&agma=Islam+ory&status=ngak+punya+pasangan&kerja=ngaggur+di+rumah&negara=Indo+asli&berlaku=ganti+hp&prov=jawa+timur&kab=Pacitan&picurl=https://i.waifu.pics/VIJYb_Z.png
+                    console.log(ktp)
+                    console.log(anu2)
+                    caf = `Nihh KTP Lu Bang :v`
+                    cafnay.sendMessage(m.chat, {image: ktpnya, caption: caf}, {quoted:m})
+                } else if (!/image/.test(mime)) {
+                    let anu = await UploadFileUgu(media)
+                    m.reply(util.format(anu))
+                }
+                await fs.unlinkSync(media)
+            }
+            break
                             
                   
             /*case 'tes': case 'menu': case 'help': case '?': {
@@ -965,7 +1007,7 @@ break
                     })
                 }
         }
-      if (budy.includes('Faiz')) {  
+      if (budy.includes('CAF')) {  
 cafnay.sendMessage(m.chat, {text: 'Hmmm....'}, {quoted: peksaya})
 	  }	  
 
