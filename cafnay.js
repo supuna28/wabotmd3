@@ -850,8 +850,8 @@ break
                 })
 		break
 		//////////////////MAKER MENU//////////////////
-   case 'ktpmaker': {
- if (!quoted) throw `Balas Image`
+   case 'ktp': {
+                 if (!quoted) throw `Balas Image`
  if (args.length == 0) return reply(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|Gol Darah\n\nExample: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|LoL Human|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|O`)
                 m.reply(mess.wait)
                 let media = await cafnay.downloadAndSaveMediaMessage(quoted)
@@ -859,6 +859,7 @@ break
                     let anu = await UploadFileUgu(media)
                     anu1 = await fetchJson(anu)
                     anu2 = `${anu.url}`
+                    console.log(anu2)
                     get_args = args.join(" ").split("|")
                     nik = get_args[0]
                     prov = get_args[1]
@@ -878,9 +879,7 @@ break
                     gdarah = get_args[15]
                     let ktpnya = await getBuffer(`https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${anu2}`)
                     ktp = `https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${anu2}`
-                    http://fdz-app.herokuapp.com/api/maker/ktp?nik=087877173955&nama=Ferdi+zaky+luthfi+aridho&ttl=Pacitan,02-07-2021&jk=laki-laki&gdarah=-&almt=dsn.jeruk&rt-rw=02/02&kel=gondosari&kcmtn=punung&agma=Islam+ory&status=ngak+punya+pasangan&kerja=ngaggur+di+rumah&negara=Indo+asli&berlaku=ganti+hp&prov=jawa+timur&kab=Pacitan&picurl=https://i.waifu.pics/VIJYb_Z.png
                     console.log(ktp)
-                    console.log(anu2)
                     caf = `Nihh KTP Lu Bang :v`
                     cafnay.sendMessage(m.chat, {image: ktpnya, caption: caf}, {quoted:m})
                 } else if (!/image/.test(mime)) {
