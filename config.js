@@ -35,7 +35,7 @@ global.mess = {
 	lockCmd: 'Fitur Tidak Diaktifkan Oleh Owner!',
 	example1: 'Selamat Datang @user Di Group @subject Jangan Lupa Baca Rules @desc\n\nNote :\n1. @user (Mention User Join)\n2. @bio (Get Bio User Join)\n3. @tanggal (Date Now)\n4. @desc (Get Description Group)\n5. @subject (Group Name)'
 }
-global.thumb = fs.readFileSync('./lib/hisoka.jpg')
+global.thumb = fs.readFileSync('./media/cafnay.jpg')
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
