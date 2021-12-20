@@ -856,10 +856,7 @@ break
                 m.reply(mess.wait)
                 let media = await cafnay.downloadAndSaveMediaMessage(quoted)
                 if (/image/.test(mime)) {
-                    let anu = await TelegraPh(media)
-                    anu1 = await fetchJson(anu)
-                    anu2 = `${anu.url}`
-                    console.log(anu2)
+                    let anu = await UploadFileUgu(media)
                     get_args = args.join(" ").split("|")
                     nik = get_args[0]
                     prov = get_args[1]
@@ -877,9 +874,11 @@ break
                     warga = get_args[13]
                     berlaku = get_args[14]
                     gdarah = get_args[15]
-                    let ktpnya = await getBuffer(`https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${anu}`)
-                    ktp = `https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${anu}`
+                    anu1 = `${anu.url}`
+                    let ktpnya = await getBuffer(`https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${anu1}`)
+                    ktp = `https://fdz-app.herokuapp.com/api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=${gdarah}&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${berlaku}&prov=${prov}&kab=${kabu}&picurl=${anu1}`
                     console.log(ktp)
+                    console.log(anu1)
                     caf = `Nihh KTP Lu Bang :v`
                     cafnay.sendMessage(m.chat, {image: ktpnya, caption: caf}, {quoted:m})
                 } else if (!/image/.test(mime)) {
