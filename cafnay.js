@@ -435,8 +435,7 @@ case 'hidetag':
                             }
                             break
 	    case 'sc': {
-	    m.reply('Ngapain Bang ?')
-                //m.reply('Script : https://github.com/DikaArdnt/cafnay-Morou\n\n Dont Forget Give Star')
+	    m.reply('SOON')
             }
             break
                     case 'faq':
@@ -623,12 +622,12 @@ var templatetun = proto.Message.fromObject({
                                     hydratedButtons: [{
                                         urlButton: {
                                             displayText: 'Github Owner',
-                                            url: 'https://github.com/CAF-ID'
+                                            url: 'supuna'
                                         }
                                     }, {
                                         callButton: {
                                             displayText: 'Call Owner',
-                                            phoneNumber: '6283167714830s.whatsapp.net'
+                                            phoneNumber: '94s.whatsapp.net'
                                         }
                                     }, {
 									"quickReplyButton": {
@@ -656,7 +655,7 @@ var templatetun = proto.Message.fromObject({
 var p = generateWAMessageFromContent(from, templatetun, {})
                         await cafnay.relayMessage(from, p.message, { messageId: p.key.id });
 break
-			 case 'lirik':
+			 case 'lyrics':
 				   if (!q) return reply('masukan nama lagu!')
 					   m.reply('mencari lirik...')
 				   var Lirik = await fetchJson(`https://api.dapuhy.ga/api/socialmedia/liriklagu?query=${q}&apikey=sQMpXbHimbTkxGC`)
@@ -727,11 +726,11 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let vcard = 'BEGIN:VCARD\n' // metadata of the contact card
                     + 'VERSION:3.0\n' 
                     + 'N:;CAF;;;'
-                    + 'FN:CAF•NAY\n' // full name
-                    + 'ORG:Owner - CAF;\n' // the organization of the contact
-                    + 'TEL;type=CELL;type=VOICE;waid=6283167714830:+62 857-6217-9624\n' // WhatsApp ID + phone number
+                    + 'FN:supuna\n' // full name
+                    + 'ORG:Owner - supuna;\n' // the organization of the contact
+                    + 'TEL;type=CELL;type=VOICE;waid=94753943957:+94 753-9439-57\n' // WhatsApp ID + phone number
                     + 'END:VCARD'
-                cafnay.sendMessage(m.chat, { contacts: { displayName: 'Owner - CAF', contacts: [{ vcard }] } }, { quoted: troli })
+                cafnay.sendMessage(m.chat, { contacts: { displayName: 'Owner - supuna', contacts: [{ vcard }] } }, { quoted: troli })
             }
             break
 			case 'kick': {
