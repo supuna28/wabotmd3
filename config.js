@@ -18,10 +18,10 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6283167714830']
-global.packname = 'CAF'
-global.author = 'BOT-MD'
-global.sessionName = 'cafsesi'
+global.owner = ['94753943957']
+global.packname = 'BOTKINGDOM'
+global.author = '😋'
+global.sessionName = 'session2'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
