@@ -125,7 +125,7 @@ module.exports = cafnay = async (cafnay, m, chatUpdate) => {
                          "status": 200, 
                          
                          "surface": 200, 
-                         "message": `CAF•BOTz - MD`, 
+                         "message": `SUPUNA`, 
                          "orderTitle": 'CAF', 
                          "sellerJid": '0@s.whatsapp.net'
                     } 
@@ -145,7 +145,7 @@ module.exports = cafnay = async (cafnay, m, chatUpdate) => {
                          
                          "surface": 200, 
                          "message": `Halo ${pushname}! dapet salam dari owner.`, 
-                         "orderTitle": 'dapet salam dari owner CAF!', 
+                         "orderTitle": 'BOTKINGDOM!', 
                          "sellerJid": '6285793887010@s.whatsapp.net'
                     } 
                           } 
@@ -178,14 +178,14 @@ var buatpesan = await generateWAMessageFromContent(from, {
         "hydratedButtons": [
           {
             "urlButton": {
-              "displayText": "My GITHUB",
-              "url": "https://github.com/CAF-ID"
+              "displayText": "GROUP",
+              "url": "https://chat.whatsapp.com/CIDWlH7yzEsKombRDcTKcV"
             }
           },
           {
             "callButton": {
               "displayText": "Call Me",
-              "phoneNumber": "6283167714830"
+              "phoneNumber": "94"
             }
           },
           {
@@ -196,8 +196,8 @@ var buatpesan = await generateWAMessageFromContent(from, {
           },
           {
             "quickReplyButton": {
-              "displayText": "Script Bot",
-              "id": `${prefix}sc`,
+              "displayText": "menu",
+              "id": `${prefix}menu`,
             }
           },
           {
@@ -213,7 +213,7 @@ var buatpesan = await generateWAMessageFromContent(from, {
 cafnay.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
 }
 
-anuy = ` Hai ${pushname}, Saya CAFBOTZ !
+anuy = ` Hai ${pushname},  !
 
 *INFO WAKTU*
 WIB : 
@@ -225,9 +225,7 @@ Nama : ${pushname}
 Nomor : ${m.sender}
 
 *CHAT INFO*
-Ini Grup : ${isGroup}
-Ini Owner Bot : ${isCreator}
-Ini MySelf : ${itsMe}
+Grup : ${isGroup}
 Admin Gc : ${isGroupAdmins}
 Bot Admin : ${isBotAdmins}
 
